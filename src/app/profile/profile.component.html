@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Profile</div>
+  <div class="panel-body">
+    <img [src]="authService.profile.picture" alt="">
+    <div><label for=""><i class="glyphicon glyphicon-user"></i>Nickname</label>
+    <h3>{{authService.profile.nickname}}</h3>
+    </div>
+  </div>
+  <pre>{{authService.profile | json}}</pre>
+</div>

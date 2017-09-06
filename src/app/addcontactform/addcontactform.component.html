@@ -1,0 +1,85 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Add a Contact</h4>
+  </div>
+
+  <div class="panel-body">
+    <div *ngIf="contactmodel">
+   
+   <!-- <form #newCribForm="ngForm" (ngSubmit)="postNewContact(newCribForm.value)">-->
+     <form (ngSubmit)="postNewContact()">
+      <div class="form-group col-sm-4">
+        <label for="address" class="">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Alois Napitalai"
+          name="name"
+          [(ngModel)]="contactmodel.name"
+          required>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="price" class="">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Mr"
+          name="title"
+          [(ngModel)]="contactmodel.title"
+          required
+          >
+      </div>
+  
+      <div class="form-group col-sm-4">
+        <label for="description" class="">Designation</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="STO 2"
+          name="designation"
+          [(ngModel)]="contactmodel.designation"
+          required>
+        
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="" class="">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="anapitalai@gmail.com"
+          name="email"
+          [(ngModel)]="contactmodel.email"
+          required>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="phone" class="">Phone</label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="473 4963"
+          name="phone"
+          [(ngModel)]="contactmodel.phone"
+          required>
+      </div>
+      <div class="form-group col-sm-2">
+        <label for="" class="">Image</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="an"
+          name="image"
+          [(ngModel)]="contactmodel.image"
+         required>
+      </div>
+      <div class="form-group col-sm-12">
+        <button
+          class="btn btn-primary listing-button"
+          type="submit">
+            Add
+        </button>
+      </div>
+    </form>
+    </div>
+
+  </div>  
+</div>

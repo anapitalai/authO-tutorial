@@ -1,0 +1,33 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div *ngFor='let crib of cribs' class="col-sm-4 text-center">
+  <div class="thumbnail container-fluid">
+    <!--<img src="/assets/images/{{crib.image}}.JPG" alt="" class="img-responsive img-rounded">-->
+    <h4><span class="label label-primary">{{crib.title}}</span></h4>
+    <h3><span class="label label-default">{{crib.name}}</span></h3>
+    <h3><span class="label label-default">{{crib.designation}}</span></h3>
+
+
+    <hr>
+    <button class='btn btn-success' *ngIf="!crib.showDetails" (click)="crib.showDetails=!crib.showDetails">Details</button>
+ <button class='btn btn-danger' *ngIf="!crib.showDetails" (click)="crib.showDetails=!crib.showDetails">Delete</button>
+    <div *ngIf="crib.showDetails">
+      <div class="details">
+        <h4>
+          <i class='glyphicon glyphicon-envelope'></i> <a href="mailto:{{crib.email}}">{{crib.email}}</a>
+        </h4>
+        <h3>
+          <i class='glyphicon glyphicon-earphone'></i> <a href="tel:'+675' + {{crib.phone}}">+675{{crib.phone}}</a>
+        </h3>
+
+        <button class='btn btn-danger' *ngIf="!crib.ShowDetails" (click)="crib.showDetails=!crib.showDetails">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
